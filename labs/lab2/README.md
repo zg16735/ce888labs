@@ -1,18 +1,5 @@
 # Lab2
 
-## Overleaf
-
-Go to [www.overleaf.com](https://www.overleaf.com) and create an account and a new document.
-
-## Setting up 
-* Do the following from the unix prompt of your VM
-	* Go to the directory you "cloned" the module files last time
-	* Do `git pull origin master' to bring the new files
-
-* Do the following tasks using your windows share or your unix account in the VM	
-	* Copy the lab files from the module directory into your own github lab directory, in "lab2" folder
-	* Remove everything from the copied README.md
-
 ## Histogram and Scaterplot
 
 1. Read the data for the vehicles found in the file `vehicles.csv`
