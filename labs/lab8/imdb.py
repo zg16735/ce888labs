@@ -5,7 +5,7 @@ np.random.seed(1337)  # for reproducibility
 
 from keras.preprocessing import sequence
 from keras.models import Model
-from keras.layers import Dense, Activation, Embedding, Flatten, Input, Convolution1D, LSTM, merge
+from keras.layers import Dense, Activation, Embedding, Flatten, Input, Convolution1D, LSTM, merge, Dropout
 from keras.layers.advanced_activations import PReLU
 from keras.layers.pooling import GlobalMaxPooling1D
 from keras.datasets import imdb
@@ -34,9 +34,17 @@ print('Build model...')
 inputs = Input(shape=(maxlen,))
 x = inputs
 x = Embedding(max_features, 128, dropout=0.2)(x)
+#x = Flatten()(x)
+#x = Dense(1)(x)
+#x = PReLU()(x)
+#predictions = Activation("sigmoid")(x)
+
+# x = Flatten()(x)
+# x = Dropout(0.2)(x)
+# x = Dense(1)(x)
+# predictions = Activation("sigmoid")(x)
+
 emb = x
-
-
 x = Convolution1D(64, 4, border_mode='same')(x)
 x = Activation('relu')(x)
 
@@ -47,6 +55,7 @@ y = LSTM(128, dropout_W=0.2, dropout_U=0.2)(emb)
 z = merge([x,y],mode='concat')
 z = Dense(1)(z)
 predictions = Activation("sigmoid")(z)
+
 
 
 
