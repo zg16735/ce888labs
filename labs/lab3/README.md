@@ -36,18 +36,13 @@ Output variable (desired target):
 
 
 ## Lab Exercises
-In the Ipython notebook you created
 
 * Convert to dummies using `df_dummies = pd.get_dummies(df)`
 * Columns "y_no" and "duration" must be deleted - use something like `del df_copy["attribute"]` for these two columns
 * Plot histogram of the label `y_yes`
-![distplot](./sns_plot.png?raw=true)
+* ![distplot](./sns_plot.png?raw=true)
 * Get the values and run a classifier (with outcome `y_yes`)
 * Report the results of 10-Kfold stratified cross-validation
+* Use cross_val_score function
 * Get sample importances and a confusion matrix
-![distplot](./importances.png?raw=true) 
-
-
-
-
-
+* ![distplot](./importances.png?raw=true) 
