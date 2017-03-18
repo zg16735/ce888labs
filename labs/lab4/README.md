@@ -1,6 +1,5 @@
 # Lab4
 
-
 ## Compare and plot Q-values
 
 - [ ] Keep only e-decreasing, UCB and bootstrap from your examples
