@@ -39,6 +39,10 @@ Y_test = np_utils.to_categorical(y_test, nb_classes)
 
 inputs = Input(shape=(784,))
 #x = inputs
+
+#x = Dense(64)(inputs)
+#x = PReLU()(x)
+
 x = Dense(128)(inputs)
 x = PReLU()(x)
 n_hidden_layers = 3
