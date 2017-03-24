@@ -39,10 +39,17 @@ Output variable (desired target):
 
 * Convert to dummies using `df_dummies = pd.get_dummies(df)`
 * Columns "y_no" and "duration" must be deleted - use something like `del df_copy["attribute"]` for these two columns
+
 * Plot histogram of the label `y_yes`
 * ![distplot](./sns_plot.png?raw=true)
+
 * Get the values and run a classifier (with outcome `y_yes`)
+* The value is 0.899.
+
 * Report the results of 10-Kfold stratified cross-validation
+* The mean value of scores is 0.847 and the standard deviation of scores is 0.121.
+
 * Use cross_val_score function
 * Get sample importances and a confusion matrix
-* ![distplot](./importances.png?raw=true) 
+* Importances: ![distplot](./importances.png?raw=true)
+* Confusion matrix: ![distplot](./confusion.png?raw=true)
